@@ -5,7 +5,7 @@ mount --bind /dev rootfs/dev
 cat <<EOF | LANG=en_GB.UTF-8 LANGUAGE=en_GB.UTF-8 chroot rootfs/
 
 
-apt-get -y   install sysvinit vim  zram-tools ntp squashfs-tools curl wget openssh-server console-setup 
+apt-get -y   install sysvinit-core vim  zram-tools ntp squashfs-tools curl wget openssh-server console-setup 
 
 
 umask 077
