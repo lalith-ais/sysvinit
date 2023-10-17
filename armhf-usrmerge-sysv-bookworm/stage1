@@ -1,0 +1,9 @@
+#!/bin/bash
+debootstrap --foreign --arch=armhf  bookworm rootfs/
+cat <<EOFDEB | LANG=en_GB.UTF-8 LANGUAGE=en_GB.UTF-8 chroot rootfs/
+
+/debootstrap/debootstrap --second-stage
+exit
+EOFDEB
+
+exit 0
